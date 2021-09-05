@@ -1,0 +1,108 @@
+#background {
+    background-image: url('galaga/images/stars.png');
+    background-size: cover;
+    
+    background-repeat: repeat-y;
+    animation : scroll-background 700s linear infinite;
+    height: 652px;
+    width: 1276px;
+    
+}
+#gameover{
+    height : 500px;
+    width :500px;
+    top: 76px;
+    left:338px;
+   position: absolute;
+}
+#h1{
+    top: 250px;
+    left:250px;
+    position : relative;
+}
+#score {
+    height:60px;
+    width :100px;
+    top : 0px;
+    left:1176px;
+    position: absolute;
+}
+@keyframes scroll-background {
+    from {
+        background-position-y: 0px ;
+    }
+    to{
+        background-position-y: 85200px;
+    }
+    
+}
+
+.body{
+    margin: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+
+}
+#hero{
+    background-image: url('galaga/images/player.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: 550px;
+    left:634px;
+    transition: 0.05s;
+    
+}
+.enemy{
+    background-image: url('galaga/images/enemy-2.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    
+    transition: 0.3s;
+}
+.missile{
+   
+    background-image: url('galaga/images/missile2.png');
+    left: 14.5px;
+    height: 16px;
+    width: 10px;
+    position :absolute;
+}
+#missiles{
+    height: 652px;
+    width: 1276px;
+    position: absolute;
+    overflow: hidden;
+    
+     
+}
+#enemies{
+    height: 652px;
+    width: 1276px;
+    position: absolute;
+    overflow: hidden 
+     
+}
+.enemyMissile{
+   
+    background-image: url('galaga/images/missile1.png');
+    left: 15px;
+    height: 16px;
+    width: 10px;
+    position :absolute;
+    overflow: hidden;
+}
+
+#enemyMissiles{
+    height: 652px;
+    width: 1276px;
+    position: absolute;
+     
+}
+
