@@ -9,7 +9,7 @@ One of the popular arcade game of the mid 90's , the galaga game  🚀👾 recre
 
 ### Readability of the code
 
-*    All the functions created in the script.js are named according to the purpose of the actuall function ,
+*    All the functions created in the script.js are named according to the purpose of the actual function ,
     Making it easy to read and understand .
 
 ### Modularity
