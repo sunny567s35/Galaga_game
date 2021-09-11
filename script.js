@@ -213,9 +213,9 @@
             for(var enemy = 0;enemy < enemies.length;enemy+= 1){
                 for(var missile = 0;missile < missiles.length;missile+= 1){
                     if((missiles[missile].top <= enemies[enemy].top+50)&&
-                    (missiles[missile].top > enemies[enemy].top)&&
-                    (missiles[missile].left >= enemies[enemy].left)&&
-                    (missiles[missile].left <= enemies[enemy].left + 50)){
+                    (missiles[missile].top >= enemies[enemy].top)&&
+                    (missiles[missile].left > enemies[enemy].left)&&
+                    (missiles[missile].left < enemies[enemy].left+40 )){
                         const music_2 = new Audio('galaga/audio/killenemy.mp3');
                         music_2.play();
                         
@@ -225,7 +225,8 @@
                         document.getElementById("score").innerHTML = `<h2 style = "color:#7fff00 "; >score: ${score}</h2>`
                         missiles.splice(missile,1);
                         if(score === 3000){
-                            document.getElementById("gameover").innerHTML=`<h1 style="color:#7fff01">NICE GAME , YOU WON!</h1>`
+                            document.querySelector("#won").style.display = "block";
+                           
                         }
                     }
                 }
@@ -290,15 +291,16 @@
             for(var enemy = 0;enemy < enemies.length;enemy+= 1){
                 for(var enemyMissile = 0;enemyMissile < enemyMissiles.length;enemyMissile+= 1){
                     if((enemyMissiles[enemyMissile].top >= hero.top)&&
-                    (enemyMissiles[enemyMissile].top < hero.top+48)&&
-                    (enemyMissiles[enemyMissile].left <= hero.left+48)&&
-                    (enemyMissiles[enemyMissile].left >= hero.left+10)){
+                    (enemyMissiles[enemyMissile].top <= hero.top+40)&&
+                    (enemyMissiles[enemyMissile].left +15 <= hero.left+40)&&
+                    (enemyMissiles[enemyMissile].left >= hero.left)){
                         
                         //show gameover pop up
                         clearInterval(gl)
                         clearInterval(el)
                         document.getElementById("score").innerHTML = `<h2 style = "color:#7fff00 "; >score: ${score}</h2>`
-                        document.getElementById("gameover").innerHTML=`<h1 id = 'h1' style="color:#7fff01">GAME OVER!</h1>`
+                        document.querySelector("#gameover").style.display = "block";
+
                     break;
                     }
                 }
@@ -316,7 +318,7 @@
                         console.log("collision detected")
                         clearInterval(el)
                         document.getElementById("score").innerHTML = `<h2 style = "color:#7fff00 "; >score: ${score}</h2>`
-        
-                        document.getElementById("gameover").innerHTML=`<h1 id = 'h1' style="color:#7fff01">GAME OVER!</h1>`
+                        document.querySelector("#gameover").style.display = "block";
+                        
                         break;
                     }}}

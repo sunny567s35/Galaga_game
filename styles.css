@@ -8,18 +8,53 @@
     width: 1276px;
     
 }
-#gameover{
-    height : 500px;
-    width :500px;
-    top: 76px;
-    left:338px;
-   position: absolute;
-}
-#h1{
-    top: 250px;
-    left:250px;
-    position : relative;
-}
+#won {
+    top:300px;
+    left:500px;
+    display: none;
+    position: absolute;
+    background: rgba(59, 2, 36, 0);
+    color:#7fff00;
+    padding: 20px 50px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    text-align: center;
+    animation: pop-in 1s;
+  }
+  
+  #gameover {
+    top:300px;
+    left:500px;
+    display: none;
+    position: absolute;
+    background: rgba(59, 2, 36, 0);
+    color:#7fff00;
+    padding: 20px 50px;
+    box-shadow: 0 2px 10px rgba(82, 149, 236, 0.2);
+    border-radius: 10px;
+    text-align: center;
+    animation: pop-in 1s;
+  }
+  
+  
+  @keyframes pop-in {
+    0% {
+      opacity: 0;
+      transform: translate(0, -100px);
+    }
+    10% {
+      opacity: 5;
+    }
+    50% {
+      transform: translate(0, 30px);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+
+
+
 #score {
     height:60px;
     width :100px;
@@ -49,7 +84,7 @@
     background-size: contain;
     background-repeat: no-repeat;
     height: 50px;
-    width: 50px;
+    width: 40px;
     position: absolute;
     top: 550px;
     left:634px;
@@ -61,7 +96,7 @@
     background-size: contain;
     background-repeat: no-repeat;
     height: 50px;
-    width: 50px;
+    width: 40px;
     position: absolute;
     
     transition: 0.3s;
