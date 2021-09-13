@@ -19,3 +19,6 @@ One of the popular arcade game of the mid 90's , the galaga game  🚀👾 recre
 ### Robustness
 
 *  The program is error free and handles the error scenarios gracefully 
+
+*  Here is the deployed link of the game : [ https://sunny567s35.github.io/Galaga_game/game.html   ]
+
